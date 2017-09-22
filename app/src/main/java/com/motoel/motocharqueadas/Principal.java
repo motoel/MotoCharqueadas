@@ -18,7 +18,10 @@ import java.io.FileOutputStream;
 public class Principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c2f4ac9136859f14793950f0fce1190ea735458f
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
