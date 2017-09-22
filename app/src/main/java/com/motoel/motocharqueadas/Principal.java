@@ -1,17 +1,15 @@
 package com.motoel.motocharqueadas;
 
 import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.support.design.widget.NavigationView;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -20,7 +18,6 @@ import java.io.FileOutputStream;
 public class Principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    String aa = "Criado por Diego e alterado no site";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
