@@ -20,8 +20,6 @@ import java.io.FileOutputStream;
 public class Principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    String aa = "Criado por Diego e alterado no site";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -112,18 +110,6 @@ public class Principal extends AppCompatActivity
 
 
     private void CriarArquivoTexto() {
-
-        String filename = "myfile.txt";
-        String string = "Hello world!";
-        FileOutputStream outputStream;
-
-        try {
-            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
-            outputStream.write(string.getBytes());
-            outputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
     }
 
