@@ -20,7 +20,7 @@ import java.io.FileOutputStream;
 public class Principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    String aa = "Criado por Diego";
+    String aa = "Criado por Diego e alterado no site";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
