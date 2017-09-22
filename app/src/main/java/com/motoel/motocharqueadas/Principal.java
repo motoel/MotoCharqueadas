@@ -113,18 +113,6 @@ public class Principal extends AppCompatActivity
 
     private void CriarArquivoTexto() {
 
-        String filename = "myfile.txt";
-        String string = "Hello world!";
-        FileOutputStream outputStream;
-
-        try {
-            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
-            outputStream.write(string.getBytes());
-            outputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
     }
 
     @Override
