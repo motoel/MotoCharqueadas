@@ -1,0 +1,87 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.motoel.motocharqueadas.patrocinadores">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+        <TableRow android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/imgPat_00"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/capacete" />
+
+            <TextView
+                android:id="@+id/textView_00"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="***\naa\naa" />
+
+        </TableRow>
+
+        <TableRow android:background="#CCCCCC">
+
+            <ImageView
+                android:id="@+id/imgPat_01"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/capacete" />
+
+            <TextView
+                android:id="@+id/textView_01"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="***" />
+        </TableRow>
+
+        <TableRow android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/imgPat_02"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/capacete" />
+
+            <TextView
+                android:id="@+id/textView_02"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="***" />
+        </TableRow>
+
+        <TableRow android:background="#CCCCCC">
+
+            <ImageView
+                android:id="@+id/imgPat_03"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/capacete" />
+
+            <TextView
+                android:id="@+id/textView_03"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="***" />
+        </TableRow>
+
+    </TableLayout>
+
+</FrameLayout>

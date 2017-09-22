@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.motoel.motocharqueadas.Principal"
+    android:scrollbars="vertical"
+    android:layout_weight="1"
+    android:screenOrientation="portrait"
+    android:background="#290000"
+    android:fillViewport="true">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_span="3"
+                android:layout_height="150dp"
+                android:background="@android:color/background_dark"
+                android:layout_margin="20dp">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true" />
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow>
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_span="3"
+                android:layout_height="150dp"
+                android:layout_width="match_parent"
+                android:background="@android:color/background_dark">
+
+                <ImageView
+                    android:id="@+id/imgProximaAtracao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/proxima_atracao_01" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="PRÓXIMA ATRAÇÃO"
+                    android:textColor="@color/fonteH1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignLeft="@id/imgProximaAtracao"
+                    android:layout_alignTop="@id/imgProximaAtracao"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/TextProximaAtracaoContador"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="32 DIAS  |  20 HORAS  |  10 MINUTOS"
+                    android:fontFamily="sans-serif-medium"
+                    android:background="#BF000000"
+                    android:textColor="@color/fonteH1"
+                    android:textAlignment="center"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow android:layout_marginTop="10dp">
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_span="3"
+                android:layout_height="150dp"
+                android:layout_width="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgSobreEvento"
+                    android:layout_width="475dp"
+                    android:layout_height="170dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sobre_evento" />
+
+                <TextView
+                    android:fontFamily="sans-serif-medium"
+                    android:id="@+id/txtSobreEvento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SOBRE O EVENTO"
+                    android:textColor="@color/fonteH1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignLeft="@id/imgSobreEvento"
+                    android:layout_alignTop="@id/imgSobreEvento"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sobre_evento"
+                    android:textColor="#fff"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_alignLeft="@id/txtSobreEvento"
+                    android:layout_alignTop="@id/txtSobreEvento"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgHotel"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:src="@drawable/ic_qd_hotel" />
+
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_qd_camisetas" />
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_qd_rifa" />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+</ScrollView>

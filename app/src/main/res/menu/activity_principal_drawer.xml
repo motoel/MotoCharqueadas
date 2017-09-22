@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_principal"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/nav_programacao"
+            android:icon="@drawable/ic_programacao"
+            android:title="Programação" />
+        <item
+            android:id="@+id/nav_fotos"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Fotos 2017" />
+        <item
+            android:id="@+id/nav_como_chegar"
+            android:icon="@drawable/ic_map_black_24dp"
+            android:title="Como Chegar" />
+        <item
+            android:id="@+id/nav_eventos_passados"
+            android:icon="@drawable/ic_history_black_24dp"
+            android:title="Eventos Passados" />
+        <item
+            android:id="@+id/nav_contato"
+            android:icon="@drawable/ic_chat_black_24dp"
+            android:title="Contato" />
+        <item
+            android:id="@+id/nav_patrocinadores"
+            android:icon="@drawable/ic_loyalty_black_24dp"
+            android:title="Patrocinadores" />
+    </group>
+
+
+</menu>
