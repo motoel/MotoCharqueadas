@@ -147,8 +147,6 @@
                 android:src="@drawable/ic_qd_rifa" />
         </TableRow>
 
-
     </TableLayout>
-
 
 </ScrollView>

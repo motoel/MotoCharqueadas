@@ -14,7 +14,6 @@ import java.util.List;
 
 public class frag_principal extends Fragment {
 
-    private static final Integer[] DESTAQUES = {R.drawable.atracao_principal_01,R.drawable.atracao_principal_02,R.drawable.atracao_principal_03,R.drawable.atracao_principal_04,R.drawable.atracao_principal_05};
     List<Integer> lstImages = new ArrayList<>();
 
     @Nullable
@@ -28,9 +27,11 @@ public class frag_principal extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         getActivity().setTitle("MOTO CHARQUEADAS 2017");
 
-        lstImages.add(R.drawable.atracao_principal_01);
-        lstImages.add(R.drawable.atracao_principal_02);
-        lstImages.add(R.drawable.atracao_principal_03);
+        lstImages.add(R.drawable.ic_atracao_principal_01);
+        lstImages.add(R.drawable.ic_atracao_principal_02);
+        lstImages.add(R.drawable.ic_atracao_principal_03);
+        lstImages.add(R.drawable.ic_atracao_principal_04);
+        lstImages.add(R.drawable.ic_atracao_principal_05);
 
         HorizontalInfiniteCycleViewPager pager = (HorizontalInfiniteCycleViewPager)getView().findViewById(R.id.hicvp);
         HorizontalPagerAdapter adapter = new HorizontalPagerAdapter(lstImages, getActivity().getBaseContext());
