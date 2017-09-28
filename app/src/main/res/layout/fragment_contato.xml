@@ -71,7 +71,7 @@
             android:layout_alignStart="@+id/imageView2"
             android:layout_below="@+id/imageView3"
             android:layout_marginTop="16dp"
-            android:src="@drawable/ic_whats" />
+            android:src="@drawable/ic_whasapp" />
 
     </RelativeLayout>
 
