@@ -21,6 +21,6 @@ public class programacao_completa_slide_3 extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle(R.string.title_activity_tab_programacao_3);
+        getActivity().setTitle("Programação - 12/11");
     }
 }

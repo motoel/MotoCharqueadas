@@ -3,18 +3,23 @@ package com.motoel.motocharqueadas;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager;
-
+import android.os.Handler;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Calendar;
+import java.util.Timer;
+import java.util.TimerTask;
+import me.relex.circleindicator.CircleIndicator;
 
 public class frag_principal extends Fragment {
 
-    List<Integer> lstImages = new ArrayList<>();
+    private static ViewPager mPager;
+    private static int currentPage = 0;
+    private static final Integer[] DESTAQUES= {R.drawable.atracao_principal_01,R.drawable.atracao_principal_02,R.drawable.atracao_principal_03,R.drawable.atracao_principal_04,R.drawable.atracao_principal_05};
+    private ArrayList<Integer> DESTAQUESArray = new ArrayList<Integer>();
 
     @Nullable
     @Override
@@ -25,16 +30,38 @@ public class frag_principal extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("MOTO CHARQUEADAS 2017");
+        getActivity().setTitle("MOTO CHARQUEADAS");
 
-        lstImages.add(R.drawable.ic_atracao_principal_01);
-        lstImages.add(R.drawable.ic_atracao_principal_02);
-        lstImages.add(R.drawable.ic_atracao_principal_03);
-        lstImages.add(R.drawable.ic_atracao_principal_04);
-        lstImages.add(R.drawable.ic_atracao_principal_05);
+       //initSlider();
+    }
 
-        HorizontalInfiniteCycleViewPager pager = (HorizontalInfiniteCycleViewPager)getView().findViewById(R.id.hicvp);
-        HorizontalPagerAdapter adapter = new HorizontalPagerAdapter(lstImages, getActivity().getBaseContext());
-        pager.setAdapter(adapter);
+    private void initSlider() {
+        for(int i=0;i<DESTAQUES.length;i++)
+            DESTAQUESArray.add(DESTAQUES[i]);
+
+        mPager = (ViewPager) getView().findViewById(R.id.pager);
+        mPager.setAdapter(new MyAdapter(getActivity(), DESTAQUESArray));
+        //CircleIndicator indicator = (CircleIndicator) getView().findViewById(R.id.indicator);
+        //indicator.setViewPager(mPager);
+
+        /*
+        // Auto start of viewpager
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentPage == DESTAQUES.length) {
+                    currentPage = 0;
+                }
+                mPager.setCurrentItem(currentPage++, true);
+            }
+        };
+        Timer swipeTimer = new Timer();
+        swipeTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        }, 7500, 7500);
+*/
     }
 }

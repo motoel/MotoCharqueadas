@@ -1,26 +1,56 @@
 package com.motoel.motocharqueadas;
 
+import android.app.Activity;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.File;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.support.design.widget.NavigationView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.Reader;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.sql.SQLException;
+
 
 public class Principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private final String PATH = "/data/data/com.motoel.motocharqueadas/img";  //put the downloaded file here
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -37,22 +67,9 @@ public class Principal extends AppCompatActivity
 
         displaySelectedScreen(R.id.nav_principal);
 
-        /*super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_principal);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerToggle = new ActionBarDrawerToggle(this, drawer,toolbar ,  0, 0);
-        mDrawerToggle.syncState();
 
         //final TextView proximaAtracao = (TextView) findViewById(R.id.TextProximaAtracaoContador);
 
-        //initSlider();
-        */
         //region PROXIMO EVENTO TIMER desabilitado
         /*final Calendar tProximaAtracao = Calendar.getInstance();
         tProximaAtracao.set(Calendar.DAY_OF_MONTH,24);
@@ -102,13 +119,137 @@ public class Principal extends AppCompatActivity
         */
         //endregion -
 
-        CriarArquivoTexto();
 
+        Thread thread = new Thread() {
+            @Override
+            public void run() {
+                downloadFile("http://www.oracle.com/technetwork/java/readme-2-149793.txt", new File(getCacheDir(), "abdede.txt"));
+            }
+        };
+
+        thread.start();
     }
 
+    private void CriarBD() {
+        SqliteDatabase myDbHelper = new SqliteDatabase(this);
 
-    private void CriarArquivoTexto() {
+        try {
 
+            myDbHelper.createDataBase();
+
+        } catch (IOException ioe) {
+
+            throw new Error("Unable to create database");
+
+        }
+
+        try {
+
+            myDbHelper.openDataBase();
+
+        }catch(SQLException sqle){
+
+           // throw sqle;
+
+        }
+    }
+
+    /* Função para verificar existência de conexão com a internet*/
+    public  boolean verificaConexao() {
+        boolean conectado;
+        ConnectivityManager conectivtyManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (conectivtyManager.getActiveNetworkInfo() != null
+                && conectivtyManager.getActiveNetworkInfo().isAvailable()
+                && conectivtyManager.getActiveNetworkInfo().isConnected()) {
+            conectado = true;
+        } else {
+            conectado = false;
+        }
+        return conectado;
+    }
+
+    void downloadFile(String _url, File _file) {
+        String path =_url;
+        URL u = null;
+        try {
+            u = new URL(path);
+            HttpURLConnection c = (HttpURLConnection) u.openConnection();
+            c.setRequestMethod("GET");
+            c.connect();
+
+            final InputStream in = c.getInputStream();
+
+            copyInputStreamToFile(in, _file);
+            //final String s = convertStreamToString(in);
+
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                       // TextView t = (TextView) findViewById(R.id.txtteste);
+                       // t.setText(s);
+
+                    //copyInputStreamToFile(in, new File(getCacheDir(), "teste.txt"));
+                }
+            });
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (ProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void copyInputStreamToFile(InputStream in, File file) {
+        OutputStream out = null;
+
+        try {
+            out = new FileOutputStream(file);
+            byte[] buf = new byte[1024];
+            int len;
+            while((len=in.read(buf))>0){
+                out.write(buf,0,len);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            // Ensure that the InputStreams are closed even if there's an exception.
+            try {
+                if ( out != null ) {
+                    out.close();
+                }
+
+                // If you want to close the "in" InputStream yourself then remove this
+                // from here but ensure that you close it yourself eventually.
+                in.close();
+            }
+            catch ( IOException e ) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private static String convertStreamToString(InputStream is) throws UnsupportedEncodingException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is,"UTF-8"));
+        StringBuilder sb = new StringBuilder();
+        String line = null;
+        try {
+            while ((line = reader.readLine()) != null) {
+                sb.append(line + "\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                is.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return sb.toString();
     }
 
     @Override

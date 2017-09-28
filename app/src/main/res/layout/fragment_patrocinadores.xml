@@ -1,406 +1,87 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.motoel.motocharqueadas.patrocinadores"
-    android:scrollbars="vertical"
-    android:layout_weight="1"
-    android:screenOrientation="portrait"
-    android:background="#290000"
-    android:fillViewport="true">
+    tools:context="com.motoel.motocharqueadas.patrocinadores">
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:stretchColumns="1">
 
         <TableRow android:background="#FFFFFF">
+
             <ImageView
-                android:id="@+id/imgPat_Grande01"
+                android:id="@+id/imgPat_00"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/ic_valecross" />
+                android:src="@drawable/capacete" />
+
             <TextView
-                android:id="@+id/txtPat_Grande01"
+                android:id="@+id/textView_00"
+                android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:gravity="center|start"
-                android:text="Valecross - Revenda Honda\n(51) 3658 xxxx\nCharqueadas - RS" />
-        </TableRow>
-        <TableRow android:background="#CCCCCC">
-            <ImageView
-                android:id="@+id/imgPat_Grande02"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_ciadacerveja" />
-            <TextView
-                android:id="@+id/txtPat_Grande02"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="CiA da Cerveja - Depósito de bebidas\n(51) xxxxx xxxx\nCharqueadas - RS" />
+                android:text="***\naa\naa" />
+
+        </TableRow>
+
+        <TableRow android:background="#CCCCCC">
+
+            <ImageView
+                android:id="@+id/imgPat_01"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/capacete" />
+
+            <TextView
+                android:id="@+id/textView_01"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="***" />
         </TableRow>
 
         <TableRow android:background="#FFFFFF">
+
             <ImageView
-                android:id="@+id/imgPat_Manga01"
+                android:id="@+id/imgPat_02"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/ic_motocar_2017" />
+                android:src="@drawable/capacete" />
+
             <TextView
-                android:id="@+id/txtPat_Manga01"
+                android:id="@+id/textView_02"
+                android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Motocar - Revenda de Motocicletas\n(51) 3658 xxxx\nCharqueadas - RS" />
-        </TableRow>
-        <TableRow android:background="#CCCCCC">
-            <ImageView
-                android:id="@+id/imgPat_Manga02"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_galpaodapizza" />
-            <TextView
-                android:id="@+id/txtPat_Manga02"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Galpão da Pizza - Restaurante e Pizzaria\n(51) 3658 xxxx\nCharqueadas - RS" />
-        </TableRow>
-        <TableRow android:background="#FFFFFF">
-            <ImageView
-                android:id="@+id/imgPat_Manga03"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_santossupermercado" />
-            <TextView
-                android:id="@+id/txtPat_Manga03"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Santos Supermercado\n(51) 3658 7727\nCharqueadas - RS" />
-        </TableRow>
-        <TableRow android:background="#CCCCCC">
-            <ImageView
-                android:id="@+id/imgPat_Manga04"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_bentoalbino" />
-            <TextView
-                android:id="@+id/txtPat_Manga04"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Bento Albino - Cachaças de Alambique\n(51) 36xx xxxx\nMaquiné - RS" />
+                android:text="***" />
         </TableRow>
 
-        <TableRow android:background="#FFFFFF">
+        <TableRow android:background="#CCCCCC">
+
             <ImageView
-                android:id="@+id/imgPat_Pequeno01"
+                android:id="@+id/imgPat_03"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/ic_shell" />
+                android:src="@drawable/capacete" />
+
             <TextView
-                android:id="@+id/txtPat_Pequeno01"
+                android:id="@+id/textView_03"
+                android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Posto Shell - Posto de combustível\n(51) 36xx xxxx\nCharqueadas - RS" />
-        </TableRow>
-        <TableRow android:background="#CCCCCC">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno02"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_agropecuariaavenida" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno02"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Agropecuária Avenida\n(51) 3658-2695\nAvenida Perimetral Sul, 1462 - Vila AFP, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#FFFFFF">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno03"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_barbeariagalito" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno03"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Barbearia do Galito\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#CCCCCC">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno04"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_casadocontrutor" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno04"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Casa do Contrutor\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#FFFFFF">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno05"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_casaflorfloricultura" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno05"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Casa Flor Floricultura\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#CCCCCC">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno06"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_cthidraulicos" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno06"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="CT Hidráulicos e Pneumáticos\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#FFFFFF">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno07"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_eletricadelfin" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno07"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Elétrica Delfin\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#CCCCCC">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno08"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_fag" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno08"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="FAG Comunicação Visual\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#FFFFFF">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno09"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_drmotopecas" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno09"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="DR Motos\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#CCCCCC">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno10"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_iebinstaladoraeletricabrasil" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno10"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="IEB Instaladora Elétrica Brasil\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#FFFFFF">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno11"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_licenmaquinasequipamentos" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno11"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Licen - Máquinas e Equipamentos\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#CCCCCC">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno12"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_reluzservicosindustriais" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno12"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Reluz - Serviços Industriais\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#FFFFFF">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno13"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_maltepuro" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno13"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Malte Puro\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#CCCCCC">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno14"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_marekbeertruck" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno14"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Marek BeerTruck\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#FFFFFF">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno15"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_moto10" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno15"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Moto 10\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#CCCCCC">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno16"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_prettestransporte" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno16"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Prettes\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#FFFFFF">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno17"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_rolareusinagemindustrial" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno17"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Rolare - Usinagem Industrial\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
-        </TableRow>
-        <TableRow android:background="#CCCCCC">
-            <ImageView
-                android:id="@+id/imgPat_Pequeno18"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_toninhoimoveis" />
-            <TextView
-                android:id="@+id/txtPat_Pequeno18"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Toninho Imóveis\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="***" />
         </TableRow>
 
     </TableLayout>
-</ScrollView>
+
+</FrameLayout>

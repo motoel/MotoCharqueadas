@@ -4,9 +4,10 @@
     android:layout_height="match_parent"
     tools:context="com.motoel.motocharqueadas.como_chegar">
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/title_activity_como_chegar" />
+        android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>
