@@ -32,9 +32,9 @@ public class como_chegar extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        LatLng UCA = new LatLng(-29.9557825, -51.6060643);
-        mMap.addMarker(new MarkerOptions().position(UCA).title("Parque Municipal de Eventos de Charqueadas")).showInfoWindow();
+        LatLng CampoRodeioCharqueadas = new LatLng(-29.9557825, -51.6060643);
+        mMap.addMarker(new MarkerOptions().position(CampoRodeioCharqueadas).title("Parque Municipal de Eventos de Charqueadas")).showInfoWindow();
 
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(UCA,17));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(CampoRodeioCharqueadas,17));
     }
 }

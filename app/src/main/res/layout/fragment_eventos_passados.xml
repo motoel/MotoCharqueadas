@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.motoel.motocharqueadas.como_chegar"
+    tools:context="com.motoel.motocharqueadas.eventos_passados"
     android:scrollbars="vertical"
     android:layout_weight="1"
     android:screenOrientation="portrait"
@@ -21,7 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/text_title_como_chegar"
+                android:text="@string/text_title_eventos_passados"
                 android:textColor="@color/fonteH1"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="5dp"
@@ -34,33 +34,20 @@
                 android:layout_weight="1"
                 android:textColor="#fff"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="35dp"
-                android:text="@string/text_como_chegar" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/text_eventos_passados" />
         </TableRow>
         <TableRow>
-            <TextView
-                android:fontFamily="sans-serif-medium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
                 android:layout_weight="1"
-                android:text="DISTANCIAS"
-                android:textColor="@color/fonteH1"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="5dp"
-                android:layout_centerVertical="true" />
+                android:src="@drawable/png_motocharqueadas2016logo"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
         </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="#fff"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="35dp"
-                android:text="@string/text_distancias" />
-        </TableRow>
+
         <TableRow>
             <TextView
                 android:fontFamily="sans-serif-medium"
@@ -68,25 +55,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="LOCALIZAÇÃO DO PARQUE DE EVENTOS"
+                android:text="FOTOS 2016"
                 android:textColor="@color/fonteH1"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="5dp"
                 android:layout_centerVertical="true" />
         </TableRow>
-        <TableRow>
-            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:map="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/map"
-                android:name="com.google.android.gms.maps.SupportMapFragment"
-                android:layout_width="match_parent"
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:layout_height="200dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                tools:context="com.motoel.motocharqueadas.como_chegar" />
+                android:src="@drawable/ic_qd_camisetas" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_qd_hotel" />
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_qd_hotel" />
         </TableRow>
     </TableLayout>
 </ScrollView>
