@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -39,8 +40,10 @@ public class SqliteDatabase extends SQLiteOpenHelper {
         boolean dbExist = checkDataBase();
 
         if(dbExist){
+            Log.d("BD_DEBUG", "DB EXITE!??");
             //do nothing - database already exist
         }else{
+            Log.d("BD_DEBUG", "DB Ñ EXISTE");
 
             //By calling this method and empty database will be created into the default system path
             //of your application so we are gonna be able to overwrite that database with our database.
@@ -69,7 +72,7 @@ public class SqliteDatabase extends SQLiteOpenHelper {
             checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
         }catch(SQLiteException e){
 
-            //database does't exist yet.
+            Log.e("DEU-ruim DB", e.toString());
 
         }
 
@@ -83,6 +86,7 @@ public class SqliteDatabase extends SQLiteOpenHelper {
     }
 
     public void copyDataBase(boolean useAsset) throws IOException {
+
         //Open your local db as the input stream
         InputStream myInput;
         if (useAsset) {

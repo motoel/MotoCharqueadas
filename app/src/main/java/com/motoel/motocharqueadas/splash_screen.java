@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
 
 public class splash_screen extends AppCompatActivity {
@@ -17,7 +18,6 @@ public class splash_screen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         new BkTarefa().execute();
-
     }
 
     private class BkTarefa extends AsyncTask <String, Integer, String> {
@@ -37,7 +37,13 @@ public class splash_screen extends AppCompatActivity {
 
             publishProgress(3);
 
-            SqliteDatabase sql = new SqliteDatabase(getApplicationContext());
+            SqliteDatabase sql = new SqliteDatabase(getBaseContext());
+
+            try {
+                sql.createDataBase();
+            } catch (Exception e) {
+                Log.e("DEU-ruim DB", e.toString()) ;
+            }
 
             SystemClock.sleep(2500);
 
