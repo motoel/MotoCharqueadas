@@ -8,7 +8,7 @@
     <string name="title_activity_principal_menu_lateral">MOTO CHARQUEADAS 2017</string>
     <string name="title_activity_principal">Principal</string>
     <string name="title_activity_programacao_completa">Programação Completa</string>
-    <string name="title_activity_como_chegar">Como Chegar</string>
+    <string name="title_activity_splash_screen">Moto Charqueadas 2017 - Inicialização</string>
     <string name="title_activity_tab_programacao">Programação</string>
     <string name="title_activity_tab_programacao_1">Sexta (10/10)</string>
     <string name="title_activity_tab_programacao_2">Sábado (11/10)</string>
@@ -20,6 +20,9 @@
     </string>
     <string name="text_programacao_completa_sabado">Programação Completa Sábado (11/10)</string>
     <string name="text_programacao_completa_domingo">Programação Completa Domingo (12/10)</string>
+    <string name="text_como_chegar">Evento acontece no Parque Municipal de Eventos de Charqueadas, comumente conhecido como campo de rodeio. O parque de evento é fechado e contem completa infraestrutura para a realização de eventos com grandes públicos.\n
+    Possuindo vasta área verde para camping, bem como área coberta, com segurança e banheiros fixos. Possui palco central e área coberta para expositores e praça de alimentação.\n
+    O parque de evento fica as margens da RS-401, com fácil acesso e ampla área para estacionamento.\n</string>
 
     <string name="sobre_evento">
         O evento nasceu da iniciativa da construção de um evento para todos, sendo este, um evento onde motociclistas irão sentir-se em casa, literalmente.
