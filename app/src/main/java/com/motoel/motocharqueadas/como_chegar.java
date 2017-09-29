@@ -1,7 +1,12 @@
 package com.motoel.motocharqueadas;
 
-import android.content.Context;
-import android.net.Uri;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,20 +14,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class como_chegar extends Fragment {
+public class como_chegar extends Fragment implements OnMapReadyCallback {
+
+    private GoogleMap mMap;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //returning our layout file
-        //change R.layout.yourlayoutfilename for each of your fragments
-        return inflater.inflate(R.layout.fragment_como_chegar, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_como_chegar, container, false);
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
+        return rootView;
     }
 
-
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle("Como Chegar");
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+        LatLng UCA = new LatLng(-29.9557825, -51.6060643);
+        mMap.addMarker(new MarkerOptions().position(UCA).title("Parque Municipal de Eventos de Charqueadas")).showInfoWindow();
+
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(UCA,17));
     }
 }
