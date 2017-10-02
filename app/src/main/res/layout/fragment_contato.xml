@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#290000"
     tools:context="com.motoel.motocharqueadas.contato">
 
 
@@ -13,6 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="#fff"
             android:gravity="center|left"
             android:text="Marcos Disuita: (51) 995 005 242\nDiego Lima : (51) 999 397 617"
             android:layout_marginLeft="15dp"
@@ -25,6 +27,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="#fff"
             android:layout_alignBottom="@+id/imageView5"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/imageView5"
@@ -38,6 +41,7 @@
             android:layout_marginLeft="15dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="#fff"
             android:layout_above="@+id/imageView3"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/imageView2"

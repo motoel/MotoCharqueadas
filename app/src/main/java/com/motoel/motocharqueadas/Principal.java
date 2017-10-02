@@ -165,11 +165,14 @@ public class Principal extends AppCompatActivity
             case R.id.nav_como_chegar:
                 fragment = new como_chegar();
                 break;
-            case R.id.nav_patrocinadores:
-                fragment = new patrocinadores();
+            case R.id.nav_eventos_passados:
+                fragment = new eventos_passados();
                 break;
             case R.id.nav_contato:
                 fragment = new contato();
+                break;
+            case R.id.nav_patrocinadores:
+                fragment = new patrocinadores();
                 break;
         }
 
