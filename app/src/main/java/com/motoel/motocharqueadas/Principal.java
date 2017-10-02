@@ -1,5 +1,6 @@
 package com.motoel.motocharqueadas;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -110,11 +111,21 @@ public class Principal extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+        Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.content_frame);
+        if (currentFragment != null && currentFragment instanceof frag_principal) {
+            Intent intent = new Intent(this, splash_screen.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // this will clear all the stack
+            intent.putExtra("Exit me", true);
+            startActivity(intent);
+            finish();
+        }
+        else {
+            Fragment fragment = new frag_principal();
+            if (fragment != null) {
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.content_frame, fragment);
+                ft.commit();
+            }
         }
     }
 

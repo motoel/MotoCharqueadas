@@ -41,9 +41,9 @@
         <TableRow>
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="200dp"
                 android:layout_weight="1"
-                android:src="@drawable/png_motocharqueadas2016logo"
+                android:src="@drawable/ic_motocharqueadas2016_logo"
                 android:layout_centerVertical="true"
                 android:layout_alignParentStart="true" />
         </TableRow>
@@ -61,27 +61,53 @@
                 android:layout_marginLeft="5dp"
                 android:layout_centerVertical="true" />
         </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+        <RelativeLayout>
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:src="@drawable/ic_qd_camisetas" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:src="@drawable/eventpass01"
+                android:id="@+id/eventpass01" />
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_qd_hotel" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:src="@drawable/eventpass02"
+                android:id="@+id/eventpass02"
+                android:layout_below="@+id/eventpass01"
+                android:layout_alignParentStart="true" />
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_qd_hotel" />
-        </TableRow>
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/eventpass03"
+                android:id="@+id/eventpass03"
+                android:layout_below="@+id/eventpass02"
+                android:layout_alignParentStart="true" />
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/eventpass04"
+                android:id="@+id/eventpass04"
+                android:layout_toEndOf="@+id/eventpass03"
+                android:layout_below="@+id/eventpass02" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:src="@drawable/eventpass12"
+                android:id="@+id/eventpass12"
+                android:layout_below="@+id/eventpass03"
+                android:layout_alignParentEnd="true" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:src="@drawable/eventpass06"
+                android:id="@+id/eventpass06"
+                android:layout_below="@+id/eventpass12"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
     </TableLayout>
 </ScrollView>

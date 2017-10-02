@@ -29,7 +29,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:gravity="center|start"
-                android:text="Valecross - Revenda Honda\n(51) 3658 xxxx\nCharqueadas - RS" />
+                android:text="Valecross | Concessionária Honda\n(51) 3658-0090\nRS-401, 4639 - Cruz de Malta, Charqueadas - RS, 96745-000" />
         </TableRow>
         <TableRow android:background="#CCCCCC">
             <ImageView
@@ -45,7 +45,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="CiA da Cerveja - Depósito de bebidas\n(51) xxxxx xxxx\nCharqueadas - RS" />
+                android:text="CiA da Cerveja - Depósito de bebidas\n(51) 9657-5127\nRua Guanabara 337, Charqueadas - RS\nFacebook: Cia da Cerveja" />
         </TableRow>
 
         <TableRow android:background="#FFFFFF">
@@ -62,7 +62,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Motocar - Revenda de Motocicletas\n(51) 3658 xxxx\nCharqueadas - RS" />
+                android:text="Motocar - Revenda de Motocicletas\n(51) 3658-3436\nRS 401 4924, Charqueadas - RS\nFacebook: @MotocarMotos" />
         </TableRow>
         <TableRow android:background="#CCCCCC">
             <ImageView
@@ -78,7 +78,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Galpão da Pizza - Restaurante e Pizzaria\n(51) 3658 xxxx\nCharqueadas - RS" />
+                android:text="Galpão da Pizza - Restaurante e Pizzaria\n(51) 3658-0095\nRua José athanasio 565, Charqueadas - RS\nFacebook: @Galpao2015" />
         </TableRow>
         <TableRow android:background="#FFFFFF">
             <ImageView
@@ -94,7 +94,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Santos Supermercado\n(51) 3658 7727\nCharqueadas - RS" />
+                android:text="Santos Supermercado\n(51) 3658 7727\nRua Padre Pinto 2038, Charqueadas - RS\nFacebook: @supermercadosantoscharqueadas" />
         </TableRow>
         <TableRow android:background="#CCCCCC">
             <ImageView
@@ -110,7 +110,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Bento Albino - Cachaças de Alambique\n(51) 36xx xxxx\nMaquiné - RS" />
+                android:text="Bento Albino - Cachaças de Alambique\n(51) 3022-3952\nBR 101, Km 67 - Maquiné - RS\nFacebook: @bentoalbino" />
         </TableRow>
 
         <TableRow android:background="#FFFFFF">
@@ -127,7 +127,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Posto Shell - Posto de combustível\n(51) 36xx xxxx\nCharqueadas - RS" />
+                android:text="Posto Shell - Posto de combustível\n(51) 3658-7772\nRS 401 4451, Charqueadas - RS" />
         </TableRow>
         <TableRow android:background="#CCCCCC">
             <ImageView
@@ -143,7 +143,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Agropecuária Avenida\n(51) 3658-2695\nAvenida Perimetral Sul, 1462 - Vila AFP, Charqueadas, RS" />
+                android:text="Agropecuária Avenida\n(51) 3658-2695\nAvenida Perimetral Sul 1462, Vila AFP, Charqueadas, RS\nFacebook: @agropecuariaavenida.vilaAFP" />
         </TableRow>
         <TableRow android:background="#FFFFFF">
             <ImageView
@@ -159,7 +159,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Barbearia do Galito\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="Barbearia do Galito\n(51) 9132-4275\nRua James Johnson 418, Charqueadas, RS\nFacebook: Barbearia do Galito" />
         </TableRow>
         <TableRow android:background="#CCCCCC">
             <ImageView
@@ -175,7 +175,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Casa do Contrutor\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="Casa do Contrutor\n(51) 3658-1190\nAv. Senador Salgado Filho 40, Charqueadas, RS\nFacebook: Casa do Construtor" />
         </TableRow>
         <TableRow android:background="#FFFFFF">
             <ImageView
@@ -191,7 +191,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Casa Flor Floricultura\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="Casa Flor Floricultura\n(51) 3658-4147\nRua São Jerônimo 41, Sul América, Charqueadas, RS" />
         </TableRow>
         <TableRow android:background="#CCCCCC">
             <ImageView
@@ -207,7 +207,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="CT Hidráulicos e Pneumáticos\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="CT Hidráulicos e Pneumáticos\n(51) 3658-2104\nRS 401 1599, Charqueadas, RS" />
         </TableRow>
         <TableRow android:background="#FFFFFF">
             <ImageView
@@ -223,7 +223,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Elétrica Delfin\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="Elétrica Delfin\n(51) 3658-1333\nAv. Primeiro de Maio 915, Charqueadas, RS\nFacebook: @Eletricadelfinltda" />
         </TableRow>
         <TableRow android:background="#CCCCCC">
             <ImageView
@@ -239,7 +239,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="FAG Comunicação Visual\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="FAG Comunicação Visual\n(51) 3658-3394\nRua Rio Grande do Norte 600, Charqueadas, RS\nFacebook: FAG Comunicação Visual" />
         </TableRow>
         <TableRow android:background="#FFFFFF">
             <ImageView
@@ -255,7 +255,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="DR Motos\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="DR Moto Peças\n(51) 3658-7693\nAv. Brasil 116, Sul América, Charqueadas, RS\nFacebook: @drmotospecas" />
         </TableRow>
         <TableRow android:background="#CCCCCC">
             <ImageView
@@ -271,7 +271,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="IEB Instaladora Elétrica Brasil\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="IEB Instaladora Elétrica Brasil\n(51) 3477-7001\nRua Tapajós 39, Canoas, RS" />
         </TableRow>
         <TableRow android:background="#FFFFFF">
             <ImageView
@@ -287,7 +287,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Licen - Máquinas e Equipamentos\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="Licen - Máquinas e Equipamentos\n(51) 3658-3416\nRua Pedro Carneiro Pereira 262, Charqueadas, RS" />
         </TableRow>
         <TableRow android:background="#CCCCCC">
             <ImageView
@@ -303,7 +303,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Reluz - Serviços Industriais\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="Reluz - Serviços Industriais\n(51) 3141-2272\nRua Sergipe 72, Charqueadas, RS" />
         </TableRow>
         <TableRow android:background="#FFFFFF">
             <ImageView
@@ -319,7 +319,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Malte Puro\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="Malte Puro - Cervejas Especiais\n(51) 99819-9958\nAv. Dr. José Athanasio 141, Charqueadas, RS\nFacebook: @maltepuro" />
         </TableRow>
         <TableRow android:background="#CCCCCC">
             <ImageView
@@ -335,7 +335,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Marek BeerTruck\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="Marek BeerTruck\nCharqueadas, RS\nFacebook: @Marekbeertruck" />
         </TableRow>
         <TableRow android:background="#FFFFFF">
             <ImageView
@@ -351,7 +351,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Moto 10\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="Moto 10\n(51) 3658-7709\nRua Fernando de Noronha, Charqueadas, RS\nFacebook: Moto 10" />
         </TableRow>
         <TableRow android:background="#CCCCCC">
             <ImageView
@@ -367,7 +367,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Prettes\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="Prettes\n(51) 3658-6112\nRua 15 de Novembro 559, Charqueadas, RS\nFacebook: Prettes Locadora de Veículos Ltda" />
         </TableRow>
         <TableRow android:background="#FFFFFF">
             <ImageView
@@ -383,7 +383,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Rolare - Usinagem Industrial\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="Rolare - Usinagem Industrial\n(51) 3141-2216\nRua Ivo José de Barcelos 925, São Jerônimo, RS\nFacebook: Rolare Usinagem CNC-Desenvolvimento-Soluções" />
         </TableRow>
         <TableRow android:background="#CCCCCC">
             <ImageView
@@ -399,7 +399,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Toninho Imóveis\n(51) xxxx-xxxx\nxxxxxx, Charqueadas, RS" />
+                android:text="Toninho Imóveis\n(51) 3658-5528\nAv. Bento Gonçalves 831, Charqueadas, RS\nFacebook: Toninho Imóveis" />
         </TableRow>
 
     </TableLayout>
