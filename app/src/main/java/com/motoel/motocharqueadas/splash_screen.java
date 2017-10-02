@@ -37,6 +37,11 @@ public class splash_screen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         new BkTarefa().execute();
+
+        if(getIntent().getBooleanExtra("Exit me", false)){
+            finish();
+            return; // add this to prevent from doing unnecessary stuffs
+        }
     }
 
     private class BkTarefa extends AsyncTask <String, Integer, String> {
