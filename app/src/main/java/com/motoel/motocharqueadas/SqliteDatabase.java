@@ -1,6 +1,7 @@
 package com.motoel.motocharqueadas;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -57,6 +58,33 @@ public class SqliteDatabase extends SQLiteOpenHelper {
                 throw new Error("Error copying database");
             }
         }
+    }
+
+    public int verificaVersao() {
+        SQLiteDatabase database = this.getReadableDatabase();
+
+        Cursor cursor = database.rawQuery("SELECT * FROM Versao", null);
+        cursor.moveToFirst();
+        return Integer.parseInt(cursor.getString(0));
+    }
+
+    public String[] preencheEventos() {
+        SQLiteDatabase database = this.getReadableDatabase();
+
+        Cursor cursor = database.rawQuery("SELECT * FROM programacao ORDER BY datetime(dataHora) ASC", null);
+        int nroResults = cursor.getCount();
+        int valorAtual=0;
+        String[] retorno = new String[nroResults];
+
+        if (cursor != null && cursor.moveToFirst()){
+            do{
+                retorno[valorAtual] = cursor.getString(0) + ";" + cursor.getString(1) + ";" + cursor.getString(2);
+
+                valorAtual++;
+            } while (cursor.moveToNext());
+        }
+
+        return retorno;
     }
 
     /**

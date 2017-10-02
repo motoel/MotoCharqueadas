@@ -1,6 +1,5 @@
 package com.motoel.motocharqueadas;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -12,8 +11,6 @@ import android.support.v7.widget.Toolbar;
 import android.support.design.widget.NavigationView;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import java.io.FileOutputStream;
 
 public class Principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
