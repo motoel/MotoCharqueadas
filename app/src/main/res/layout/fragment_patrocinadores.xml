@@ -29,7 +29,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:gravity="center|start"
-                android:text="Valecross | Concessionária Honda\n(51) 3658-0090\nRS-401, 4639 - Cruz de Malta, Charqueadas - RS, 96745-000" />
+                android:text="Valecross | Concessionária Honda\n(51) 3658-0090\nRS-401, 4639 - Cruz de Malta, Charqueadas - RS" />
         </TableRow>
         <TableRow android:background="#CCCCCC">
             <ImageView
@@ -45,7 +45,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="CiA da Cerveja - Depósito de bebidas\n(51) 9657-5127\nRua Guanabara 337, Charqueadas - RS\nFacebook: Cia da Cerveja" />
+                android:text="CiA da Cerveja - Depósito de bebidas\n(51) 99657-5127\nRua Guanabara 337, Charqueadas - RS\nFacebook: Cia da Cerveja" />
         </TableRow>
 
         <TableRow android:background="#FFFFFF">
@@ -159,7 +159,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="Barbearia do Galito\n(51) 9132-4275\nRua James Johnson 418, Charqueadas, RS\nFacebook: Barbearia do Galito" />
+                android:text="Barbearia do Galito\n(51) 99132-4275\nRua James Johnson 418, Charqueadas, RS\nFacebook: Barbearia do Galito" />
         </TableRow>
         <TableRow android:background="#CCCCCC">
             <ImageView

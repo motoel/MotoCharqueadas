@@ -35,6 +35,6 @@ public class como_chegar extends Fragment implements OnMapReadyCallback {
         LatLng CampoRodeioCharqueadas = new LatLng(-29.9557825, -51.6060643);
         mMap.addMarker(new MarkerOptions().position(CampoRodeioCharqueadas).title("Parque Municipal de Eventos de Charqueadas")).showInfoWindow();
 
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(CampoRodeioCharqueadas,17));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(CampoRodeioCharqueadas,12));
     }
 }
