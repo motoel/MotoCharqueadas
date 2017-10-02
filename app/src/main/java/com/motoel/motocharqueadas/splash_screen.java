@@ -50,7 +50,7 @@ public class splash_screen extends AppCompatActivity {
             //CASO O BANCO NÃO EXISTA ELE COPIA DO ASSET PARA A PASTA DATABASE
             publishProgress(3);
 
-            final SqliteDatabase sql = new SqliteDatabase(getBaseContext());
+            final SqliteDatabase sql = new SqliteDatabase(getApplicationContext());
 
             try {
                 sql.createDataBase();

@@ -68,17 +68,22 @@ public class SqliteDatabase extends SQLiteOpenHelper {
         return Integer.parseInt(cursor.getString(0));
     }
 
-    public String[] preencheEventos() {
+    public String[] preencheEventos(int dia) {
         SQLiteDatabase database = this.getReadableDatabase();
 
-        Cursor cursor = database.rawQuery("SELECT * FROM programacao ORDER BY datetime(dataHora) ASC", null);
+        String query = "SELECT * FROM programacao " +
+                "WHERE datetime(dataHora) BETWEEN " +
+                "datetime('2017-11-"+String.valueOf(dia)+" 06:00') AND datetime('2017-11-"+String.valueOf(dia+1)+" 06:00') " +
+                "ORDER BY datetime(dataHora) ASC";
+
+        Cursor cursor = database.rawQuery(query, null);
         int nroResults = cursor.getCount();
         int valorAtual=0;
         String[] retorno = new String[nroResults];
 
         if (cursor != null && cursor.moveToFirst()){
             do{
-                retorno[valorAtual] = cursor.getString(0) + ";" + cursor.getString(1) + ";" + cursor.getString(2);
+                retorno[valorAtual] = cursor.getString(0) + ";" + cursor.getString(1) + ";" + cursor.getString(2)+ ";" + cursor.getString(3);
 
                 valorAtual++;
             } while (cursor.moveToNext());
@@ -124,10 +129,10 @@ public class SqliteDatabase extends SQLiteOpenHelper {
         }
 
         // Path to the just created empty db
-        String outFileName = DB_PATH + DB_NAME;
+        File outFileName = myContext.getDatabasePath(DB_NAME);
 
         //Open the empty db as the output stream
-        OutputStream myOutput = new FileOutputStream(outFileName);
+        OutputStream myOutput = new FileOutputStream(DB_PATH+DB_NAME);
 
         //transfer bytes from the inputfile to the outputfile
         byte[] buffer = new byte[1024];
