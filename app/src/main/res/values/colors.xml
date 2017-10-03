@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="fonteH1">#FFFF66</color>
     <color name="progressbarsplash">#FF0000</color>
+    <color name="white">#FFFFFF</color>
 </resources>

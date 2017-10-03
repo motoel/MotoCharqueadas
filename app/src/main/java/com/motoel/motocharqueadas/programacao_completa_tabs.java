@@ -2,13 +2,16 @@ package com.motoel.motocharqueadas;
 
 import android.content.Context;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTabHost;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 public class programacao_completa_tabs extends Fragment {
@@ -33,6 +36,19 @@ public class programacao_completa_tabs extends Fragment {
                 programacao_completa_slide_2.class, null);
         mTabHost.addTab(mTabHost.newTabSpec("Domingo").setIndicator("Domingo"),
                 programacao_completa_slide_3.class, null);
+
+        for (int i = 0; i < mTabHost.getTabWidget().getChildCount(); i++) {
+            View v = mTabHost.getTabWidget().getChildAt(i);
+
+
+            TextView tv = (TextView) mTabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                tv.setTextColor(getContext().getColor(R.color.white));
+            } else {
+                //noinspection deprecation
+                tv.setTextColor(getContext().getResources().getColor(R.color.white));
+            }
+        }
 
         return rootView;
     }
