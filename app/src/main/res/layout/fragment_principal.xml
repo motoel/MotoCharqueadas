@@ -85,13 +85,13 @@
             <RelativeLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_span="3"
-                android:layout_height="150dp"
+                android:layout_height="225dp"
                 android:layout_width="match_parent">
 
                 <ImageView
                     android:id="@+id/imgSobreEvento"
                     android:layout_width="475dp"
-                    android:layout_height="170dp"
+                    android:layout_height="225dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/sobre_evento" />
 
@@ -118,6 +118,47 @@
                     android:layout_marginRight="35dp"
                     android:layout_alignLeft="@id/txtSobreEvento"
                     android:layout_alignTop="@id/txtSobreEvento"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow android:layout_marginTop="10dp">
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_span="3"
+                android:layout_height="400dp"
+                android:layout_width="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgRifa"
+                    android:layout_width="475dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sobre_evento" />
+
+                <TextView
+                    android:fontFamily="sans-serif-medium"
+                    android:id="@+id/txtRifa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AÇÃO ENTRE AMIGOS (RIFA)"
+                    android:textColor="@color/fonteH1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignLeft="@id/imgRifa"
+                    android:layout_alignTop="@id/imgRifa"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sobre_rifa"
+                    android:textColor="#fff"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_alignLeft="@id/imgRifa"
+                    android:layout_alignTop="@id/imgRifa"
                     android:layout_centerVertical="true" />
             </RelativeLayout>
         </TableRow>
