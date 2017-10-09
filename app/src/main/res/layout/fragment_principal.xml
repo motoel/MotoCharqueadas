@@ -22,9 +22,9 @@
             <RelativeLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_span="3"
-                android:layout_height="150dp"
+                android:layout_height="250dp"
                 android:background="@android:color/background_dark"
-                android:layout_margin="20dp">
+                android:layout_margin="0dp">
 
                 <com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager
                     android:id="@+id/hicvp"
@@ -55,7 +55,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/imgProximaAtracao"
-                    android:scaleType="fitXY" />
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
 
                 <TextView
                     android:id="@+id/TextProximaAtracao"
@@ -64,6 +65,7 @@
                     android:fontFamily="sans-serif-medium"
                     android:textAlignment="center"
                     android:text=""
+                    android:textSize="25dp"
                     android:textColor="@color/fonteH1"
                     android:background="#BF000000"
                     android:layout_marginTop="0dp"
@@ -94,7 +96,7 @@
 
                 <ImageView
                     android:id="@+id/imgSobreEvento"
-                    android:layout_width="475dp"
+                    android:layout_width="match_parent"
                     android:layout_height="225dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/sobre_evento" />
@@ -135,7 +137,7 @@
 
                 <ImageView
                     android:id="@+id/imgRifa"
-                    android:layout_width="475dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
                     android:src="@drawable/sobre_evento" />

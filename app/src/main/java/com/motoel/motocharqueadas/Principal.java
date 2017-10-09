@@ -23,6 +23,8 @@ import java.util.Calendar;
 public class Principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    boolean atualiza=false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -42,19 +44,23 @@ public class Principal extends AppCompatActivity
 
         displaySelectedScreen(R.id.nav_principal);
 
-        new Principal.BkTarefa().execute();
-
+        new BkTarefa().execute();
     }
 
     @Override
     public void onBackPressed() {
         Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.content_frame);
         if (currentFragment != null && currentFragment instanceof frag_principal) {
-            Intent intent = new Intent(this, splash_screen.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // this will clear all the stack
-            intent.putExtra("Exit me", true);
-            startActivity(intent);
-            finish();
+
+            //Intent intent = new Intent(this, splash_screen.class);
+            //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // this will clear all the stack
+            //intent.putExtra("EXIT", true);
+            //startActivity(intent);
+            //finish();
+            moveTaskToBack(true);
+            android.os.Process.killProcess(android.os.Process.myPid());
+            System.exit(1);
+
         }
         else {
             Fragment fragment = new frag_principal();
@@ -103,12 +109,13 @@ public class Principal extends AppCompatActivity
         switch (itemId) {
             case R.id.nav_principal:
                 fragment = new frag_principal();
+                atualiza=true;
                 break;
             case R.id.nav_programacao:
                 fragment = new programacao_completa_tabs();
                 break;
             case R.id.nav_fotos:
-                fragment = new programacao_completa_slide_2();
+                fragment = new fotos_evento_atual ();
                 break;
             case R.id.nav_como_chegar:
                 fragment = new como_chegar();
@@ -149,12 +156,6 @@ public class Principal extends AppCompatActivity
 
             try {
                 while (1 == 1) {
-                    if (txtProximaAtracaoC==null) {
-                        txtProximaAtracaoC = (TextView) findViewById(R.id.TextProximaAtracaoContador);
-                        txtProximaAtracaoT = (TextView) findViewById(R.id.TextProximaAtracao);
-                        imgProximaAtracao = (ImageView) findViewById(R.id.imgProximaAtracao);
-                    }
-
                     Thread.sleep(1000);
 
                     publishProgress(0);
@@ -169,6 +170,14 @@ public class Principal extends AppCompatActivity
         private void TimerProximaAtracao() {
             SqliteDatabase sql = new SqliteDatabase(getBaseContext());
             String ret = sql.proximoEvento();
+
+            if (txtProximaAtracaoC==null || atualiza) {
+                txtProximaAtracaoC = (TextView) findViewById(R.id.TextProximaAtracaoContador);
+                txtProximaAtracaoT = (TextView) findViewById(R.id.TextProximaAtracao);
+                imgProximaAtracao = (ImageView) findViewById(R.id.imgProximaAtracao);
+
+                atualiza=false;
+            }
 
             if (ret=="deu ruim") {
                 //Log.d("DEBUG_DATA","deu ruim");

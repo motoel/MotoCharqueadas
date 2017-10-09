@@ -52,4 +52,5 @@ public class programacao_completa_slide_3 extends Fragment {
             txtLista.setText(Html.fromHtml(texto));
         }
     }
+
 }
