@@ -1,6 +1,8 @@
 package com.motoel.motocharqueadas;
 
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -10,8 +12,13 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.design.widget.NavigationView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.Calendar;
 
 public class Principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,77 +42,7 @@ public class Principal extends AppCompatActivity
 
         displaySelectedScreen(R.id.nav_principal);
 
-        /*super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_principal);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerToggle = new ActionBarDrawerToggle(this, drawer,toolbar ,  0, 0);
-        mDrawerToggle.syncState();
-
-        //final TextView proximaAtracao = (TextView) findViewById(R.id.TextProximaAtracaoContador);
-
-        //initSlider();
-        */
-        //region PROXIMO EVENTO TIMER desabilitado
-        /*final Calendar tProximaAtracao = Calendar.getInstance();
-        tProximaAtracao.set(Calendar.DAY_OF_MONTH,24);
-        tProximaAtracao.set(Calendar.MONTH,6); // 0-11 so 1 less
-        tProximaAtracao.set(Calendar.YEAR, 2017);
-        tProximaAtracao.set(Calendar.HOUR_OF_DAY, 0);
-        tProximaAtracao.set(Calendar.MINUTE, 45);
-        tProximaAtracao.set(Calendar.SECOND, 0);
-
-        Calendar tAgora = Calendar.getInstance();
-
-        long diff = tAgora.getTimeInMillis() - tProximaAtracao.getTimeInMillis();
-        long diffSeconds = diff / 1000 % 60;
-        long diffMinutes = diff / (60 * 1000) % 60;
-        long diffHours = diff / (60 * 60 * 1000) % 24;
-        long diffDays = diff / (24 * 60 * 60 * 1000);
-
-        proximaAtracao.setText("Dias: " + diffDays + " Horas: " + diffHours + " Minutos: " + diffMinutes + " Sec.:" +diffSeconds);
-
-        Thread t = new Thread() {
-            @Override
-            public void run() {
-                try {
-                    while (!isInterrupted()) {
-                        Thread.sleep(1000);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                Calendar tAgora = Calendar.getInstance();
-
-                                long diff = tAgora.getTimeInMillis() - tProximaAtracao.getTimeInMillis();
-                                long diffSeconds = diff / 1000 % 60;
-                                long diffMinutes = diff / (60 * 1000) % 60;
-                                long diffHours = diff / (60 * 60 * 1000) % 24;
-                                long diffDays = diff / (24 * 60 * 60 * 1000);
-
-                                proximaAtracao.setText("Dias: " + diffDays + " Horas: " + diffHours + " Minutos: " + diffMinutes + " Sec.:" +diffSeconds);
-                            }
-                        });
-                    }
-                } catch (InterruptedException e) {
-                }
-            }
-        };
-
-        //t.start();
-        */
-        //endregion -
-
-        CriarArquivoTexto();
-
-    }
-
-
-    private void CriarArquivoTexto() {
+        new Principal.BkTarefa().execute();
 
     }
 
@@ -196,6 +133,97 @@ public class Principal extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+    }
+
+    private class BkTarefa extends AsyncTask<String, Integer, String> {
+
+        TextView txtProximaAtracaoC;
+        TextView txtProximaAtracaoT;
+        ImageView imgProximaAtracao;
+        String img_patch = "";
+        String nome_do_evento = "";
+        String tempo = "";
+
+        @Override
+        protected String doInBackground(String... urls) {
+
+            try {
+                while (1 == 1) {
+                    if (txtProximaAtracaoC==null) {
+                        txtProximaAtracaoC = (TextView) findViewById(R.id.TextProximaAtracaoContador);
+                        txtProximaAtracaoT = (TextView) findViewById(R.id.TextProximaAtracao);
+                        imgProximaAtracao = (ImageView) findViewById(R.id.imgProximaAtracao);
+                    }
+
+                    Thread.sleep(1000);
+
+                    publishProgress(0);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            return null;
+        }
+
+        private void TimerProximaAtracao() {
+            SqliteDatabase sql = new SqliteDatabase(getBaseContext());
+            String ret = sql.proximoEvento();
+
+            if (ret=="deu ruim") {
+                //Log.d("DEBUG_DATA","deu ruim");
+                tempo = "";
+            } else {
+                String ret01[] = ret.split(";");
+
+                img_patch =  ret01[2].substring(0, ret01[2].lastIndexOf("."));
+                nome_do_evento = ret01[1];
+
+                Calendar tProximaAtracao = Calendar.getInstance();
+                tProximaAtracao.set(Calendar.DAY_OF_MONTH, Integer.parseInt(ret01[0].substring(8,10)));
+                tProximaAtracao.set(Calendar.MONTH, Integer.parseInt(ret01[0].substring(5,7)) - 1); // 0-11 so 1 less
+                tProximaAtracao.set(Calendar.YEAR, 2017);
+                tProximaAtracao.set(Calendar.HOUR_OF_DAY, Integer.parseInt(ret01[0].substring(11,13)));
+                tProximaAtracao.set(Calendar.MINUTE, Integer.parseInt(ret01[0].substring(14,16)));
+                tProximaAtracao.set(Calendar.SECOND, 0);
+
+                Calendar tAgora = Calendar.getInstance();
+
+                long diff = tAgora.getTimeInMillis() - tProximaAtracao.getTimeInMillis();
+                if (diff<0) { diff=diff*-1;}
+                long diffSeconds = diff / 1000 % 60;
+                long diffMinutes = diff / (60 * 1000) % 60;
+                long diffHours = diff / (60 * 60 * 1000) % 24;
+                long diffDays = diff / (24 * 60 * 60 * 1000);
+
+                tempo = String.valueOf(diffDays) + " DIAS(s)" +
+                        "  |  " + String.valueOf(diffHours) +
+                        " HORA(s)  |  " + String.valueOf(diffMinutes) +
+                        " MINUTO(S)  |  " +String.valueOf(diffSeconds) + " SEG.";
+            }
+
+        }
+
+        protected void onProgressUpdate(Integer... values) {
+            TimerProximaAtracao();
+
+            if (tempo=="") {
+                //deu pau ou nao tem atracao
+                //carregar atracao padrao
+            } else {
+                txtProximaAtracaoC.setText(tempo);
+                txtProximaAtracaoT.setText(nome_do_evento);
+                imgProximaAtracao.setImageResource(getBaseContext().getResources().getIdentifier(img_patch , "drawable", getPackageName()));
+            }
+
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            Intent intent = new Intent(Principal.this,
+                    Principal.class);
+            startActivity(intent);
+        }
     }
 
 }

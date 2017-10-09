@@ -36,7 +36,9 @@
                     app:icvp_min_page_scale_offset="5dp"
                     app:icvp_max_page_scale="0.8"
                     app:icvp_min_page_scale="0.55"
-                    app:icvp_medium_scaled="false"/>
+                    app:icvp_medium_scaled="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
 
             </RelativeLayout>
         </TableRow>
@@ -45,25 +47,27 @@
             <RelativeLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_span="3"
-                android:layout_height="150dp"
+                android:layout_height="300dp"
                 android:layout_width="match_parent"
                 android:background="@android:color/background_dark">
 
-                <ImageView
-                    android:id="@+id/imgProximaAtracao"
+                <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/proxima_atracao_01" />
+                    android:id="@+id/imgProximaAtracao"
+                    android:scaleType="fitXY" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/TextProximaAtracao"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
-                    android:text="PRÓXIMA ATRAÇÃO"
+                    android:textAlignment="center"
+                    android:text=""
                     android:textColor="@color/fonteH1"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:background="#BF000000"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="0dp"
                     android:layout_alignLeft="@id/imgProximaAtracao"
                     android:layout_alignTop="@id/imgProximaAtracao"
                     android:layout_centerVertical="true" />
@@ -72,7 +76,7 @@
                     android:id="@+id/TextProximaAtracaoContador"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="32 DIAS  |  20 HORAS  |  10 MINUTOS"
+                    android:text=""
                     android:fontFamily="sans-serif-medium"
                     android:background="#BF000000"
                     android:textColor="@color/fonteH1"

@@ -49,7 +49,7 @@ public class splash_screen extends AppCompatActivity {
         @Override
         protected String doInBackground(String... urls) {
 
-            int delayEntreProgresso = 1000;
+            int delayEntreProgresso = 0;
 
             //VERIFICA A EXISTENCIA DO BANCO DE DADOS
             //CASO O BANCO NÃO EXISTA ELE COPIA DO ASSET PARA A PASTA DATABASE
@@ -60,7 +60,7 @@ public class splash_screen extends AppCompatActivity {
             try {
                 sql.createDataBase();
             } catch (Exception e) {
-                Log.e("DEU-ruim DB", e.toString()) ;
+                e.printStackTrace();
             }
             SystemClock.sleep(delayEntreProgresso);
 

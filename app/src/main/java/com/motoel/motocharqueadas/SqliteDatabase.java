@@ -14,6 +14,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by Marcelo on 22/09/2017.
@@ -66,6 +68,27 @@ public class SqliteDatabase extends SQLiteOpenHelper {
         Cursor cursor = database.rawQuery("SELECT * FROM Versao", null);
         cursor.moveToFirst();
         return Integer.parseInt(cursor.getString(0));
+    }
+
+    public String proximoEvento() {
+        String ret = "deu ruim";
+        SQLiteDatabase database = this.getReadableDatabase();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        String currentDateandTime = sdf.format(new Date());
+
+        String query = "SELECT * FROM programacao " +
+                "WHERE datetime(dataHora) > " +
+                "datetime('"+currentDateandTime+"') " +
+                "ORDER BY datetime(dataHora) ASC limit 1";
+
+
+        Cursor cursor = database.rawQuery(query, null);
+
+        if (cursor != null && cursor.moveToFirst()){
+            ret = cursor.getString(0) + ";" + cursor.getString(1) + ";" + cursor.getString(2)+ ";" + cursor.getString(3);
+        }
+
+        return ret;
     }
 
     public String[] preencheEventos(int dia) {
