@@ -65,6 +65,7 @@ public class Principal extends AppCompatActivity
         else {
             Fragment fragment = new frag_principal();
             if (fragment != null) {
+                atualiza=true;
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.content_frame, fragment);
                 ft.commit();
