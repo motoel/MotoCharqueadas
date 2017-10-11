@@ -87,7 +87,8 @@
             </RelativeLayout>
         </TableRow>
 
-        <TableRow android:layout_marginTop="10dp">
+        <TableRow android:layout_marginTop="10dp"
+            android:background="#669e4f">
             <RelativeLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_span="3"
@@ -98,8 +99,7 @@
                     android:id="@+id/imgSobreEvento"
                     android:layout_width="match_parent"
                     android:layout_height="225dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/sobre_evento" />
+                    android:src="@drawable/fundo_transparente" />
 
                 <TextView
                     android:fontFamily="sans-serif-medium"
@@ -128,19 +128,20 @@
             </RelativeLayout>
         </TableRow>
 
-        <TableRow android:layout_marginTop="10dp">
+        <TableRow android:layout_marginTop="10dp"
+            android:background="#7c7777">
             <RelativeLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_span="3"
                 android:layout_height="400dp"
                 android:layout_width="match_parent">
 
+
                 <ImageView
                     android:id="@+id/imgRifa"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/sobre_evento" />
+                    android:src="@drawable/fundo_transparente" />
 
                 <TextView
                     android:fontFamily="sans-serif-medium"
