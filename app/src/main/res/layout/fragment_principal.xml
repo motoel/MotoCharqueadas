@@ -88,7 +88,7 @@
         </TableRow>
 
         <TableRow android:layout_marginTop="10dp"
-            android:background="#669e4f">
+            android:background="#767676">
             <RelativeLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_span="3"
@@ -129,11 +129,11 @@
         </TableRow>
 
         <TableRow android:layout_marginTop="10dp"
-            android:background="#7c7777">
+            android:background="#767676">
             <RelativeLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_span="3"
-                android:layout_height="400dp"
+                android:layout_height="500dp"
                 android:layout_width="match_parent">
 
 
@@ -166,7 +166,19 @@
                     android:layout_marginRight="35dp"
                     android:layout_alignLeft="@id/imgRifa"
                     android:layout_alignTop="@id/imgRifa"
-                    android:layout_centerVertical="true" />
+                    android:id="@+id/textView2" />
+
+                <ImageView
+                    android:id="@+id/icimgRifa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="35dp"
+                    android:src="@drawable/ic_rifamotocharqueadas"
+                    android:layout_below="@+id/textView2"
+                    android:layout_alignStart="@+id/textView2" />
+
             </RelativeLayout>
         </TableRow>
 
