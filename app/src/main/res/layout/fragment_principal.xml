@@ -8,21 +8,20 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.motoel.motocharqueadas.Principal"
     android:scrollbars="vertical"
-    android:layout_weight="1"
     android:screenOrientation="portrait"
     android:background="#290000"
     android:fillViewport="true">
 
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:stretchColumns="1">
+        android:orientation="vertical" >
 
-        <TableRow>
             <RelativeLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_span="3"
+                android:layout_marginTop="20dp"
                 android:layout_height="250dp"
+                android:layout_width="match_parent"
                 android:background="@android:color/background_dark"
                 android:layout_margin="0dp">
 
@@ -39,14 +38,11 @@
                     app:icvp_medium_scaled="false"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentStart="true" />
-
             </RelativeLayout>
-        </TableRow>
 
-        <TableRow>
             <RelativeLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_span="3"
+                android:layout_marginTop="20dp"
                 android:layout_height="300dp"
                 android:layout_width="match_parent"
                 android:background="@android:color/background_dark">
@@ -55,6 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/imgProximaAtracao"
+                    android:scaleType="fitXY"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentStart="true" />
 
@@ -85,14 +82,12 @@
                     android:textAlignment="center"
                     android:layout_alignParentBottom="true"/>
             </RelativeLayout>
-        </TableRow>
 
-        <TableRow android:layout_marginTop="10dp"
-            android:background="#767676">
             <RelativeLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_span="3"
-                android:layout_height="225dp"
+                android:layout_marginTop="20dp"
+                android:background="#767676"
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent">
 
                 <ImageView
@@ -126,16 +121,13 @@
                     android:layout_alignTop="@id/txtSobreEvento"
                     android:layout_centerVertical="true" />
             </RelativeLayout>
-        </TableRow>
 
-        <TableRow android:layout_marginTop="10dp"
-            android:background="#767676">
             <RelativeLayout
+                android:background="#767676"
                 xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_span="3"
-                android:layout_height="500dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent">
-
 
                 <ImageView
                     android:id="@+id/imgRifa"
@@ -172,43 +164,101 @@
 
                 <ImageView
                     android:id="@+id/icimgRifa"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="35dp"
                     android:src="@drawable/ic_rifamotocharqueadas"
                     android:layout_below="@+id/textView2"
                     android:layout_alignStart="@+id/textView2" />
-
             </RelativeLayout>
-        </TableRow>
 
-        <TableRow
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
 
-            <ImageView
-                android:id="@+id/imgHotel"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_margin="10dp"
-                android:background="@color/colorPrimary"
-                android:src="@drawable/ic_qd_hotel" />
+            <TextView
+                android:layout_marginTop="15dp"
+                android:background="#767676"
+                android:fontFamily="sans-serif-medium"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/fonteH1"
+                android:text="\nREALIZAÇÃO\n\nAperte na Imagen\n para visitar o facebook\n"
+                android:layout_gravity="center"
+                android:textAlignment="center"/>
 
+            <TableRow
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginTop="0dp"
+                android:background="#767676">
 
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_qd_camisetas" />
+                <ImageView
+                    android:id="@+id/img_01"
+                    android:clickable="true"
+                    android:onClick="clickImg01"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/rea_carbo" />
 
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_qd_rifa" />
-        </TableRow>
+                <ImageView
+                    android:id="@+id/img_02"
+                    android:clickable="true"
+                    android:onClick="clickImg02"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/rea_motoel" />
 
-    </TableLayout>
+                <ImageView
+                    android:id="@+id/img_03"
+                    android:clickable="true"
+                    android:onClick="clickImg03"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/rea_cowboy" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="0dp"
+                android:background="#767676"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/img_04"
+                    android:clickable="true"
+                    android:onClick="clickImg04"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/rea_mens" />
+
+                <ImageView
+                    android:id="@+id/img_05"
+                    android:clickable="true"
+                    android:onClick="clickImg05"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/rea_zoeira" />
+
+                <ImageView
+                    android:id="@+id/img_06"
+                    android:clickable="true"
+                    android:onClick="clickImg06"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/rea_amo" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
 
 </ScrollView>

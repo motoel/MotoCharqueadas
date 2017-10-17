@@ -1,7 +1,8 @@
 package com.motoel.motocharqueadas;
 
 import android.content.Intent;
-import android.graphics.BitmapFactory;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,9 +13,9 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.design.widget.NavigationView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,6 +46,62 @@ public class Principal extends AppCompatActivity
         displaySelectedScreen(R.id.nav_principal);
 
         new BkTarefa().execute();
+    }
+
+    public String getFacebookPageURL(String url, String page_id) {
+        PackageManager packageManager =  getBaseContext().getPackageManager();
+        try {
+            int versionCode = packageManager.getPackageInfo("com.facebook.katana", 0).versionCode;
+            if (versionCode >= 3002850) { //newer versions of fb app
+                return "fb://facewebmodal/f?href=" + url;
+            } else { //older versions of fb app
+                return "fb://page/" + page_id;
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            return url; //normal web url
+        }
+    }
+
+    public void clickImg01(View v) {
+        Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
+        String facebookUrl = getFacebookPageURL("https://www.facebook.com/mgcarbonifera", "mgcarbonifera");
+        facebookIntent.setData(Uri.parse(facebookUrl));
+        startActivity(facebookIntent);
+    }
+
+    public void clickImg02(View v) {
+        Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
+        String facebookUrl = getFacebookPageURL("https://www.facebook.com/motoel", "motoel");
+        facebookIntent.setData(Uri.parse(facebookUrl));
+        startActivity(facebookIntent);
+    }
+
+    public void clickImg03(View v) {
+        Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
+        String facebookUrl = getFacebookPageURL("https://www.facebook.com/Moto-Grupo-Cowboys-De-Aço-125483018100476", "Moto-Grupo-Cowboys-De-Aço-125483018100476");
+        facebookIntent.setData(Uri.parse(facebookUrl));
+        startActivity(facebookIntent);
+    }
+
+    public void clickImg04(View v) {
+        //Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
+        //String facebookUrl = getFacebookPageURL("https://www.facebook.com/motocharqueadas", "motocharqueadas");
+        //facebookIntent.setData(Uri.parse(facebookUrl));
+        //startActivity(facebookIntent);
+    }
+
+    public void clickImg05(View v) {
+        Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
+        String facebookUrl = getFacebookPageURL("https://www.facebook.com/amo.rs.mototurismo", "amo.rs.mototurismo");
+        facebookIntent.setData(Uri.parse(facebookUrl));
+        startActivity(facebookIntent);
+    }
+
+    public void clickImg06(View v) {
+        Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
+        String facebookUrl = getFacebookPageURL("https://www.facebook.com/amo.rs.mototurismo", "amo.rs.mototurismo");
+        facebookIntent.setData(Uri.parse(facebookUrl));
+        startActivity(facebookIntent);
     }
 
     @Override
