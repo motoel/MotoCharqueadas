@@ -49,7 +49,7 @@ public class splash_screen extends AppCompatActivity {
         @Override
         protected String doInBackground(String... urls) {
 
-            int delayEntreProgresso = 250;
+            int delayEntreProgresso = 0;
 
             //VERIFICA A EXISTENCIA DO BANCO DE DADOS
             //CASO O BANCO NÃO EXISTA ELE COPIA DO ASSET PARA A PASTA DATABASE
