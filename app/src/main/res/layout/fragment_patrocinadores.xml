@@ -231,7 +231,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/ic_fag" />
+                android:src="@drawable/ic_fag_novo" />
             <TextView
                 android:id="@+id/txtPat_Pequeno08"
                 android:layout_width="wrap_content"
