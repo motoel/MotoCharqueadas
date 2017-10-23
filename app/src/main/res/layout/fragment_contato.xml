@@ -16,7 +16,7 @@
             android:layout_height="match_parent"
             android:textColor="#fff"
             android:gravity="center|left"
-            android:text="Marcos Disuita: (51) 995 005 242\nDiego Lima : (51) 999 397 617"
+            android:text="Marcos Disiuta: (51) 995 005 242\nDiego Lima : (51) 999 397 617"
             android:layout_marginLeft="15dp"
             android:layout_alignTop="@+id/imageView3"
             android:layout_alignParentEnd="true"
@@ -34,7 +34,7 @@
             android:layout_marginLeft="15dp"
             android:layout_toEndOf="@+id/imageView5"
             android:gravity="center|left"
-            android:text="Marcos Disuita: (51) 995 005 242\nDiego Lima : (51) 999 397 617" />
+            android:text="Marcos Disiuta: (51) 995 005 242\nDiego Lima : (51) 999 397 617" />
 
         <TextView
             android:id="@+id/textView"
