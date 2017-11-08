@@ -10,9 +10,9 @@
     <string name="title_activity_programacao_completa">Programação Completa</string>
     <string name="title_activity_splash_screen">Moto Charqueadas 2017 - Inicialização</string>
     <string name="title_activity_tab_programacao">Programação</string>
-    <string name="title_activity_tab_programacao_1">Sexta (10/10)</string>
-    <string name="title_activity_tab_programacao_2">Sábado (11/10)</string>
-    <string name="title_activity_tab_programacao_3">Domingo (12/10)</string>
+    <string name="title_activity_tab_programacao_1">Sexta (10/11)</string>
+    <string name="title_activity_tab_programacao_2">Sábado (11/11)</string>
+    <string name="title_activity_tab_programacao_3">Domingo (12/11)</string>
 
     <string name="text_programacao_completa_sexta">
         Programação Completa Sexta (10/10)\n
@@ -46,9 +46,13 @@
         \n\tEm 2017 o Moto Charqueadas estará imperdível, com muitas atrações e grandes shows. Anotem na agenda, dia 10 de novembro, inicia o Moto Charqueadas 2017.
     </string>
     <string name="sobre_rifa">
-        \n\tPara custear e conseguir promover o Moto Charqueadas 2017, a Liga Moto Charqueadas está realizando uma ação entre amigos, onde serão sorteados diversos prêmios.
+        \tPara custear e conseguir promover o Moto Charqueadas 2017, a Liga Moto Charqueadas está realizando uma ação entre amigos, onde serão sorteados diversos prêmios.
         \n\tA cada cupom comprado, você adquire dois números para concorrer. É muito fácil participar, basta comprar um cupom, ao preço de R$15,00 cada e você já está participando.
         \n\tNÃO PERCA TEMPO, ADQUIRA O SEU NÚMERO. SUA AJUDA É MUITO IMPORTANTE. Além de concorrer a grandes prêmios, você está ajudando o evento Moto Charqueadas, mantendo este sempre com grande atrações.
+    </string>
+    <string name="sobreSoberanas">
+        \tA Associação dos Motociclistas do Rio Grande do Sul no Moto Charqueadas 2017, no dia 11 de novembro de 2017, promoverá o concurso da SOBERANAS do MOTOCICLISMO RS 2018 - AMO-RS.
+        \n\t O Concurso tem como objetivo eleger as três candidatas mais belas que, como símbolos da mulher motociclista gaúcha, representarão a AMO/RS nos eventos promovidos por esta e seus parceiros, divulgando a cultura de duas/três rodas pelo Rio Grande do Sul nos principais eventos apoiados pela AMO/RS.
     </string>
     <string name="text_title_eventos_passados">Moto Charqueadas 2016</string>
     <string name="text_eventos_passados">

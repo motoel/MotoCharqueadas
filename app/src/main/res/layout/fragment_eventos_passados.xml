@@ -40,12 +40,14 @@
         </TableRow>
         <TableRow>
             <ImageView
-                android:layout_width="match_parent"
+                android:id="@+id/logomotocharqueadas2016"
+                android:layout_centerHorizontal="true"
+                android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:layout_weight="1"
-                android:src="@drawable/ic_motocharqueadas2016_logo"
-                android:layout_centerVertical="true"
-                android:layout_alignParentStart="true" />
+                app:srcCompat="@drawable/img_motocharqueadas2016_logo" />
+        </TableRow>
+        <TableRow>
+
         </TableRow>
 
         <TableRow>
@@ -66,13 +68,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:src="@drawable/eventpass01"
+                app:srcCompat="@drawable/eventpass01"
                 android:id="@+id/eventpass01" />
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:src="@drawable/eventpass02"
+                app:srcCompat="@drawable/eventpass02"
                 android:id="@+id/eventpass02"
                 android:layout_below="@+id/eventpass01"
                 android:layout_alignParentStart="true" />
@@ -80,7 +82,7 @@
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:layout_margin="5dp"
-                android:src="@drawable/eventpass03"
+                app:srcCompat="@drawable/eventpass03"
                 android:id="@+id/eventpass03"
                 android:layout_below="@+id/eventpass02"
                 android:layout_alignParentStart="true" />
@@ -88,7 +90,7 @@
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:layout_margin="5dp"
-                android:src="@drawable/eventpass04"
+                app:srcCompat="@drawable/eventpass04"
                 android:id="@+id/eventpass04"
                 android:layout_toEndOf="@+id/eventpass03"
                 android:layout_below="@+id/eventpass02" />
@@ -96,7 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:src="@drawable/eventpass12"
+                app:srcCompat="@drawable/eventpass12"
                 android:id="@+id/eventpass12"
                 android:layout_below="@+id/eventpass03"
                 android:layout_alignParentEnd="true" />
@@ -104,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:src="@drawable/eventpass06"
+                app:srcCompat="@drawable/eventpass06"
                 android:id="@+id/eventpass06"
                 android:layout_below="@+id/eventpass12"
                 android:layout_centerHorizontal="true" />

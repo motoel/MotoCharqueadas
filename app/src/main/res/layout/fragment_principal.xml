@@ -173,6 +173,58 @@
                     android:layout_alignStart="@+id/textView2" />
             </RelativeLayout>
 
+            <RelativeLayout
+                android:background="#767676"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgSoberanas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/fundo_transparente"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:fontFamily="sans-serif-medium"
+                    android:id="@+id/txtTituloApresentacaoSoberanas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONCURSO SOBERANAS AMO/RS 2018"
+                    android:textColor="@color/fonteH1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignLeft="@id/imgSoberanas"
+                    android:layout_alignTop="@id/imgSoberanas"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sobreSoberanas"
+                    android:textColor="#fff"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_alignLeft="@id/imgSoberanas"
+                    android:layout_alignTop="@id/imgSoberanas"
+                    android:id="@+id/textViewSobreSoberanas" />
+
+                <ImageView
+                    android:id="@+id/img_sobresoberanas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="35dp"
+                    android:src="@drawable/ic_sobresoberanas"
+                    android:layout_below="@+id/textViewSobreSoberanas"
+                    android:layout_alignStart="@+id/textViewSobreSoberanas" />
+        </RelativeLayout>
+
+
         <TableLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
